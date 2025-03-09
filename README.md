@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern SaaS Template
+
+A powerful, customizable SaaS template built with Next.js, TypeScript, Tailwind CSS, and modern web technologies. This template provides a solid foundation for building Software-as-a-Service applications with a beautiful UI, authentication, payment processing, and more.
+
+## Features
+
+- 🚀 **Modern Stack**: Built with Next.js, TypeScript, and Tailwind CSS
+- 🎨 **Beautiful UI**: Utilizes shadcn UI components for a modern, consistent design
+- 🌙 **Dark Mode**: Includes light/dark mode with system preference detection
+- 🔒 **Authentication**: Integrated with Supabase for secure user authentication
+- 💳 **Payments**: Stripe integration for subscription management
+- 📱 **Responsive**: Mobile-first design approach for all screen sizes
+- 🔍 **SEO Optimized**: Built-in SEO best practices
+- 🏎️ **Performance**: Optimized for speed and user experience
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ and npm/yarn
+- Supabase account (for authentication and database)
+- Stripe account (for payment processing)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/saas-template.git
+   cd saas-template
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.local.example .env.local
+   ```
+   Then edit `.env.local` with your Supabase and Stripe credentials.
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Project Structure
+
+```
+├── public/             # Static assets
+├── src/
+│   ├── app/            # Next.js app router pages
+│   │   ├── landing/    # Landing page components
+│   │   ├── layout/     # Layout components (header, footer)
+│   │   └── ui/         # UI components from shadcn
+│   ├── lib/            # Utility functions and libraries
+│   └── providers/      # React context providers
+├── .env.local.example  # Example environment variables
+└── README.md           # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Styling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This template uses Tailwind CSS for styling. You can customize the theme in the `tailwind.config.ts` file.
 
-## Learn More
+### Components
 
-To learn more about Next.js, take a look at the following resources:
+UI components are built with shadcn UI, which provides a set of accessible, reusable, and customizable components. You can add more components using:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx shadcn@latest add [component-name]
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Authentication
 
-## Deploy on Vercel
+Authentication is handled by Supabase. You can customize the authentication flow in the `src/lib/supabase.ts` file.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Payments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Payment processing is handled by Stripe. You can customize the payment flow in the `src/lib/stripe.ts` file.
+
+## Deployment
+
+This template is optimized for deployment on Vercel. Simply connect your GitHub repository to Vercel and it will automatically deploy your application.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Supabase](https://supabase.io/)
+- [Stripe](https://stripe.com/)
+- [Vercel](https://vercel.com/)
